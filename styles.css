@@ -1,9 +1,13 @@
 .header {
-    text-align: center;
-    position: fixed;
-    transform:translateX(20lh);
-    background-color: plum;
-    z-index: 1;
+    display: flex;
+    align-items:center;
+    justify-content:space-around;
+    flex-direction: column;
+}
+.nav{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .body{
     padding-top:200px;
@@ -13,12 +17,13 @@
 }
 .section{
     padding-bottom:50px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .img{
-    transform: translateX(380px) translateY(-40px);
 }
 .text{
-    transform: translateX(760px) translateY(-190px);
     text-align:left;
-    position: absolute;
+
 }
