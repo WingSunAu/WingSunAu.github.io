@@ -1,12 +1,13 @@
 .header {
     position: fixed;
-    top: 6rlh;
+    top: 5rlh;
     left: 50%;
     width: 70rlh;
     transform: translate(-50%, -50%);
-    padding-bottom: 4rlh;
+    padding-bottom: 3rlh;
     background-color: plum;
     z-index: 1;
+    margin-bottom:0;
 }
 
 .preface {
@@ -20,32 +21,45 @@
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 4.5rlh;
+    margin-bottom:0;
 
 }
 
 .headerArea {
-    padding-bottom: 2rlh;
+    margin:-140px
 }
 
 .page {
     position:relative;
     padding-top:1rlh;
+    margin-top:0;
     left:50%;
     transform: translate(-50%, 7.5%);
     width: 70rlh;
     background-color: aqua;
 }
-
+.about{
+    padding-bottom: 15%;
+    display: grid;
+    grid-template-columns: 10% 40% 50%;
+}
+.expProj{
+    padding-bottom: 15%;
+    display: grid;
+    grid-template-columns: 10% 40% 10% 40%;
+}
 .section {
     padding-bottom: 15%;
     display: grid;
-    grid-template-columns: 35% 35% 30%;
+    grid-template-columns: 30% 40% 30%;
 }
-
 .img {
+    margin-top:50px;
+    width:500px;
 }
 
 .text {
+    margin-top:50px;
     text-align: left;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
