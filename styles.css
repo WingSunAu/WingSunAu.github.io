@@ -1,15 +1,32 @@
+body{background-blend-mode:hard-light;}
+
 .header {
     position: fixed;
     top: 5rlh;
     left: 50%;
-    width: 70rlh;
+    width: 100%;
     transform: translate(-50%, -50%);
     padding-bottom: 3rlh;
-    background-color: plum;
+    background-image: linear-gradient( rgb(128, 62, 158), 78%, transparent);
+
     z-index: 1;
     margin-bottom:0;
 }
-
+button{
+    border:none;
+    border-radius:5px;
+    width:80px;
+    background-color: rgb(44, 31, 44);
+    color:rgb(92, 84, 84);
+    transition: .3s;
+}
+button:hover{
+    background-color:blueviolet;
+    color:white;
+    width: 100px;
+    height:50px;
+    transition: .3s;
+}
 .preface {
     text-align: center;
 }
@@ -36,17 +53,19 @@
     left:50%;
     transform: translate(-50%, 7.5%);
     width: 70rlh;
-    background-color: aqua;
+    /*background-color: rgb(53, 53, 53);*/
 }
 .about{
+    margin-left:50px;
     padding-bottom: 15%;
     display: grid;
-    grid-template-columns: 10% 40% 50%;
+    grid-template-columns: 10% 42% 44%;
 }
 .expProj{
+    margin-left:50px;
     padding-bottom: 15%;
     display: grid;
-    grid-template-columns: 10% 40% 10% 40%;
+    grid-template-columns: 10% 45% 6% 35%;
 }
 .section {
     padding-bottom: 15%;
@@ -54,13 +73,19 @@
     grid-template-columns: 30% 40% 30%;
 }
 .img {
+
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
     margin-top:50px;
     width:500px;
-}
+    border: 1px solid rgba(139, 125, 125, 0.5);
+    border-radius: 50px;
 
+}
 .text {
     margin-top:50px;
     text-align: left;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:'Lato';
+    color:white;
 
 }
