@@ -5,10 +5,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
-<body  style = "background-color: grey;" class="text">
+<body style="background-color: grey;" class="text">
     <div class="header">
         <div class="preface">
             <h1>Wing Sun Au</h1>
@@ -16,39 +18,42 @@
             <p>I build data engineering streamlining tools</p>
         </div>
         <nav class="nav">
-            <button>About</button>
-            <button>Experience</button>
-            <button>Projects</button>
+            <button><a href="#A">About</a></button>
+            <button><a href="#E">Experience</a></button>
+            <button><a href="#P">Projects</a></button>
         </nav>
     </div>
+    <a id="A"></a>
     <div class="headerArea"></div>
     <div class="page">
-        <h2 class = "sectionTitle">About</h2>
+        <h2 class="sectionTitle"> About</h2>
         <div class="about">
             <h3>Wing</h3>
-                <img class="img" src="imgs\1731096547036.jpg" alt="toybug">
-                <p class="text">I am a dynamic and self-motivated Computer Science Student at UW Bothell. I am always
-                    finding learning opportunities to grow personally and professionally.
-                    I have solid experience in project management, public relations, implementation of business models,
-                    and implementations of SDLCs.
-                    I started my journey interning with iUrban Teen as their data engineer. I audited the PNW region's
-                    employee time sheets and processed event survey data to harvest demographic statistics
-                    for the purpose of grant writing. I finished this internship having constructed a data processing
-                    algorithm to organize past event statistics in order to provide upper management with
-                    information necessary to write grant applications and impact reports. This program has been able to
-                    conduct the work that was asked of me during my time at iUrban Teen.
-                    Flexible and timely towards multi tasked roles. Excellent in time management and enjoys problem
-                    solving.
-                    Loves innovation and challenging opportunities.
-                    Specialties:
-                    *Full Stack Web Design
-                    *C++, C*, Java
-                    *Python, Pandas, Python Suites
-                    *Software Engineering Skills, SDLC's, Project Management, SE Principles and Patterns
-                </p>
+            <img class="img" src="imgs\1731096547036.jpg" alt="toybug">
+            <p class="text">I am a dynamic and self-motivated Computer Science Student at UW Bothell. I am always
+                finding learning opportunities to grow personally and professionally.
+                I have solid experience in project management, public relations, implementation of business models,
+                and implementations of SDLCs.
+                I started my journey interning with iUrban Teen as their data engineer. I audited the PNW region's
+                employee time sheets and processed event survey data to harvest demographic statistics
+                for the purpose of grant writing. I finished this internship having constructed a data processing
+                algorithm to organize past event statistics in order to provide upper management with
+                information necessary to write grant applications and impact reports. This program has been able to
+                conduct the work that was asked of me during my time at iUrban Teen.
+                Flexible and timely towards multi tasked roles. Excellent in time management and enjoys problem
+                solving.
+                Loves innovation and challenging opportunities.
+                Specialties:
+                *Full Stack Web Design
+                *C++, C*, Java
+                *Python, Pandas, Python Suites
+                *Software Engineering Skills, SDLC's, Project Management, SE Principles and Patterns
+            </p>
+            <a id="E"></a>
         </div>
-    <div>
-            <h2 class = "sectionTitle">Experience</h2>
+        <div>
+
+            <h2 class="sectionTitle">Experience</h2>
             <div class="expProj">
                 <h3>iUrban Teen: Data Engineer</h3>
                 <img class="img" src="imgs\Museum-of-Flight-2017-570x400-1.jpg" alt="toybug">
@@ -69,10 +74,12 @@
                 <p class="text">Created interactive web pages to streamline user experience with the iCare Chatbots
                     using Next.JS, TypeScript, and Tailwind.css. Work closely with back end and ux/ui teams to implement
                     best practices in web accessibility.
+                </p>
+                <a id="P"></a>
             </div>
         </div>
-        <div class>
-            <h2 class = "sectionTitle">Projects</h2>
+        <div>
+            <h2 class="sectionTitle">Projects</h2>
             <div class="expProj">
                 <h3>Bonli Ball: Lead Game Developer</h3>
                 <img class="img" src="imgs\istockphoto-1213375743-612x612.jpg" alt="toybug">
@@ -103,6 +110,36 @@
             </div>
         </div>
     </div>
+    <script>
+        // Define selector for selecting
+        // anchor links with the hash
+        let anchorSelector = 'a[href^="#"]';
+
+        // Collect all such anchor links
+        let anchorList =
+            document.querySelectorAll(anchorSelector);
+
+        // Iterate through each of the links
+        anchorList.forEach(link => {
+            link.onclick = function (e) {
+
+                // Prevent scrolling if the
+                // hash value is blank
+                e.preventDefault();
+
+                // Get the destination to scroll to
+                // using the hash property
+                let destination =
+                    document.querySelector(this.hash);
+
+                // Scroll to the destination using
+                // scrollIntoView method
+                destination.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
